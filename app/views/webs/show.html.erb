@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @web.user %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @web.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @web.description %>
+</p>
+
+<p>
+  <strong>Private:</strong>
+  <%= @web.private %>
+</p>
+
+<%= link_to 'Edit', edit_web_path(@web) %> |
+<%= link_to 'Back', webs_path %>

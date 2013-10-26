@@ -1,8 +1,14 @@
 WeSay::Application.routes.draw do
-  root 'base#home'
+  
+  root to: 'base#home'
 
-  get "about", to: 'base#about', as: 'about'
+  get 'about', to: 'base#about', as: 'about'
 
+  resources :pages
+
+  resources :webs
+
+  devise_for :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
