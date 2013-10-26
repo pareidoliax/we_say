@@ -49,3 +49,10 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+#Custom Gems
+gem 'devise'
+gem 'marked-rails'
+gem 'redcarpet'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'friendly_id', '~> 5.0.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
