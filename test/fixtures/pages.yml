@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  web_id: 
-  title: MyString
-  body: MyText
+  web_id: 1
+  title: Introduction
+  body: This could be a rather long string of markdown.
 
 two:
   web_id: 

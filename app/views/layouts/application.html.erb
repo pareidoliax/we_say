@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>WeSay</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
-  <%= yield %>
-
+  <div class='container'>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+      <div class="three columns sidebar">
+        <nav>
+          <h2 id='logo'>We Say!</h2>
+          <ul>
+            <li><%= link_to 'Home', root_path %></li>
+            <li><%= link_to 'About', about_path %></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="twelve columns offset-by-one"
+        <%= yield %>
+      </div>
+    </div>
 </body>
+
 </html>
