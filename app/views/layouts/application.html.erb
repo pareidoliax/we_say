@@ -13,13 +13,7 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
       <div class="three columns sidebar">
-        <nav>
-          <h2 id='logo'>We Say!</h2>
-          <ul>
-            <li><%= link_to 'Home', root_path %></li>
-            <li><%= link_to 'About', about_path %></li>
-          </ul>
-        </nav>
+        <%= render navigation %>
       </div>
       <div class="twelve columns offset-by-one"
         <%= yield %>

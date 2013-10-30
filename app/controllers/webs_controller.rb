@@ -14,6 +14,7 @@ class WebsController < ApplicationController
 
   # GET /webs/new
   def new
+    @controller_name = controller_name
     @web = Web.new
   end
 
