@@ -18,3 +18,7 @@
 # Ignore Local Environment Config files
 **.DS_Store
 .ruby_gemset
+
+
+# Ignore sample md files for seed generation
+/lib/assets/*.md
