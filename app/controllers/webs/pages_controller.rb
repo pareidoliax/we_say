@@ -1,5 +1,5 @@
 class Webs::PagesController < ApplicationController
-  before_action :set_web
+  before_action :set_web, :set_markdown
   before_action :set_page, only: [:show, :edit, :update, :destroy]
 
   # GET /pages
@@ -66,6 +66,11 @@ class Webs::PagesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_web
       @web = Web.find(params[:web_id])
+    end
+
+    def set_markdown
+      options = {autolink: true, no_intra_emphasis: true, fenced_code_blocks: true}
+      @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, options )
     end
 
     def set_page

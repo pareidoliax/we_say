@@ -1,20 +1,17 @@
+<% content_for :nav do %>
+  <li><%= link_to 'Pages', web_pages_path(@web) %></li>
+<% end %>
 
-<p id="notice"><%= notice %></p>
+<header>
+  <ul class='breadcrumb'>
+    <li>Web: <%= link_to @web.title, @web %></li>
+    <li>/ Page: <%= link_to @page.title, [@web, @page] %></li>
+  </ul>
+</header>
 
-<p>
-  <strong>Web:</strong>
-  <%= @page.web %>
-</p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @page.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @page.body %>
-</p>
-
-<%= link_to 'Edit', edit_page_path(@page) %> |
-<%= link_to 'Back', pages_path %>
+<%= raw @markdown.render(@page.body) %>
+<!--
+< link_to 'Edit', edit_page_path(@page) %> |
+< link_to 'Back', pages_path %>
+-->
