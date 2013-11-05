@@ -14,3 +14,10 @@
  *= require_layout.css
  *= require_tree .
  */
+
+//Webs
+.web {
+  h1 { font-size: 28px; line-height: 34px; margin-bottom: 8px; }
+  nav { float: right; }
+  li { display: inline; }
+}

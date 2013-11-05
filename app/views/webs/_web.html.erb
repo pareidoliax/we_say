@@ -1,0 +1,15 @@
+<article class='web'>
+  <header>
+    <nav class='web-nav'>
+      <ul>
+        <li><%= link_to 'Show', web %></li>
+        <li><%= link_to 'Edit', edit_web_path(web) %></li>
+        <li><%= link_to 'Destroy', web, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+      </ul>
+    </nav>
+    <h1><%= web.title %></h1>
+    <small><%= web.user %></small>
+  </header>
+  <p><%= web.description %></p>
+
+</article>
