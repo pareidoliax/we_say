@@ -1,10 +1,11 @@
-class PagesController < ApplicationController
+class Webs::PagesController < ApplicationController
+  before_action :set_web
   before_action :set_page, only: [:show, :edit, :update, :destroy]
 
   # GET /pages
   # GET /pages.json
   def index
-    @pages = Page.all
+    @pages = @web.pages.all
   end
 
   # GET /pages/1
@@ -63,6 +64,10 @@ class PagesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def set_web
+      @web = Web.find(params[:web_id])
+    end
+
     def set_page
       @page = Page.find(params[:id])
     end

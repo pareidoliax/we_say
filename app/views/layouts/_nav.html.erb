@@ -1,8 +1,9 @@
 <nav>
   <h2 id='logo'>We Say!</h2>
   <ul>
-    <li><%= link_to 'Home', root_path %></li>
-    <li><%= link_to 'About', about_path %></li>
+    <li><%= link_to 'Home', root_path %></li>    
     <li><%= link_to 'Webs', webs_path %></li>
+    <%= yield :nav %>
+    <li><%= link_to 'About', about_path %></li>
   </ul>
 </nav>

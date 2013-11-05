@@ -7,7 +7,7 @@ WeSay::Application.routes.draw do
   devise_for :users
 
   resources :webs do
-    resources :pages
+    resources :pages, controller: 'webs/pages'
   end
 
   
