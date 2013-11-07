@@ -2,6 +2,10 @@
   <li><%= link_to 'Pages', web_pages_path(@web) %></li>
 <% end %>
 
+<% content_for :crumb do %>
+  <li>/ Web: <%= link_to @web.title, @web %></li>
+<% end %>
+
 <header>
   <h1><%= "#{@web.id}  #{@web.title}" %></h1>
 </header>

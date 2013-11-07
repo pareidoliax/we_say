@@ -2,15 +2,13 @@
   <li><%= link_to 'Pages', web_pages_path(@web) %></li>
 <% end %>
 
-<header>
-  <ul class='breadcrumb'>
-    <li>Web: <%= link_to @web.title, @web %></li>
-    <li>/ Page: <%= link_to @page.title, [@web, @page] %></li>
-  </ul>
-</header>
+<% content_for :crumb do %>
+  <li>/ Web: <%= link_to @web.title, @web %></li>
+  <li>/ Page: <%= link_to @page.title, [@web, @page] %></li>
+<% end %>
 
 
-<%= raw @markdown.render(@page.body) %>
+<%= raw markdown.render(@page.body) %>
 <!--
 < link_to 'Edit', edit_page_path(@page) %> |
 < link_to 'Back', pages_path %>
